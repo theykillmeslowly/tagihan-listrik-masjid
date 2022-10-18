@@ -42,7 +42,7 @@
               @foreach ($data as $masjid)
               <div class="col-lg-6">
                 <div class="card m-2 text-center" >
-                  <img src="{{$masjid->gambar}}" class="card-img-top img-thumbnail img-fluid img-responsive" style="height:400px; width:400px; object-fit: cover;">
+                  <img src="{{asset($masjid->gambar)}}" class="card-img-top img-thumbnail img-fluid img-responsive" style="height:400px; width:400px; object-fit: cover;">
                   <div class="card-body">
                     <span class="card-title">{{Str::limit($masjid->nama_masjid, 30)}}</span>
                     <hr/>
@@ -52,7 +52,7 @@
                       <span style="font-size:15px;">Alamat</span>
                       <p style="font-size:12px">{{Str::limit($masjid->alamat, 60)}}</p>
                     </div>
-                    <a href="#" class="btn btn-primary">Cek Tagihan</a>
+                    <a href="/cek-tagihan/{{$masjid->id}}" class="btn btn-primary">Cek Tagihan</a>
                   </div>
                 </div>
               </div>

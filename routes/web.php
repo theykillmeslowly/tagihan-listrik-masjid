@@ -21,6 +21,8 @@ Route::post('/pendaftaran', 'App\Http\Controllers\HomeController@pendaftaran')->
 Route::get('/bantuan', 'App\Http\Controllers\HomeController@bantuan')->name('bantuan');
 Route::get('/bantuan/{id}', 'App\Http\Controllers\HomeController@viewBantuan')->name('view_bantuan');
 Route::get('/hubungi-kami', 'App\Http\Controllers\HomeController@hubungiKami')->name('hubungiKami');
+Route::get('/cek-tagihan/{id}', 'App\Http\Controllers\HomeController@cekTagihan')->name('cekTagihan');
+
 
 //Login
 Route::get('/login', 'App\Http\Controllers\HomeController@login')->name('login');

@@ -12,6 +12,51 @@ use Illuminate\Support\Facades\Redirect;
 
 class HomeController extends Controller
 {
+    public function cekTagihan(Request $request, $id){
+        $masjid = Masjid::find($id);
+        $ch = curl_init();
+
+        curl_setopt($ch, CURLOPT_URL, 'https://api.sepulsa.com/api/v1/carts/add/');
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_POST, 1);
+        $post = array(
+            'url' => 'http://api.sepulsa.com/api/v1/oscar/products/14/',
+            'quantity' => 1,
+            'options' => [[
+                'option' => 'https://api.sepulsa.com/api/v1/oscar/options/1/',
+                'value' => $masjid->no_listrik
+            ]]
+        );
+        $post = json_encode($post);
+
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+
+        $headers = array();
+        $headers[]  = 'sessionid: '.env('SESSION_ID');
+        $headers[]  = 'X-Chital-Api-Key: '.env('API_KEY');
+        $headers[]  = 'Content-Type:  application/json';
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+        $result = curl_exec($ch);
+        
+        if (curl_errno($ch)) {
+            return response(["error" => curl_error($ch)], 422);
+        }
+        curl_close($ch);
+
+        $result = json_decode($result);
+        if($result->errors[0]->detail == "Bill Already Paid/ Not Available"){
+            $masjid->status = 'lunas';
+            if($masjid->save()){
+                return view('tagihanLunas')->with('data', $masjid);
+            }
+        }else{
+            $masjid->status = 'belum_lunas';
+            if($masjid->save()){
+                return view('tagihanBelumLunas')->with('data', $masjid);
+            }
+        }
+    }
     public function index(){
         $masjid = Masjid::where('status', 'belum_lunas')->where('tampil', 'ya')->get();
         return view('index')->with('data', $masjid);

@@ -22,6 +22,9 @@
               <div class="text-center m-2" style="font-size: 20px; text-shadow: 2px 2px 2px rgba(0,0,0,0.25);">
                 {{ $data[0]->judul }}
               </div>
+              <div class="text-center" style="font-size: 12px;">
+                <span class="text-muted">Author : {{ $data[0]->author }}</span>
+              </div>
               <div>
                 {!! $data[0]->konten !!}
               </div>

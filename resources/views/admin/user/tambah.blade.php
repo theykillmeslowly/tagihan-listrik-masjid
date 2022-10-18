@@ -24,7 +24,8 @@
               <input type="password" class="form-control" name="conf_password">
             </div>
             <div class="mb-3">
-              <button class="btn btn-primary">Edit</button>
+              <button class="btn btn-primary">Tambah</button>
+              <a href="/admin/user" class="btn btn-primary">Kembali</a>
             </div>
           </form>
         </div>

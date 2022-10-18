@@ -42,7 +42,7 @@
                     <td>{{$item->nama_masjid}}</td>
                     <td>{{$item->alamat}}</td>
                     <td>
-                      <img src="{{$item->gambar}}" class="card-img-top img-thumbnail img-fluid img-responsive" style="height:200px; width:200px; object-fit: cover;" alt="">
+                      <img src="{{asset($item->gambar)}}" class="card-img-top img-thumbnail img-fluid img-responsive" style="height:200px; width:200px; object-fit: cover;" alt="">
                     </td>
                     <td class="text-center">
                       <a href="/admin/masjid/edit/{{$item->id}}" class="btn btn-primary">

@@ -25,16 +25,13 @@
                     <td>{{$item->nama_masjid}}</td>
                     <td>{{$item->alamat}}</td>
                     <td>
-                      <img src="{{$item->gambar}}" class="card-img-top img-thumbnail img-fluid img-responsive" style="height:200px; width:200px; object-fit: cover;" alt="">
+                      <img src="{{asset($item->gambar)}}" class="card-img-top img-thumbnail img-fluid img-responsive" style="height:200px; width:200px; object-fit: cover;" alt="">
                     </td>
                     <td class="text-center">
-                      <a href="{{$item->id}}" class="btn btn-primary">
-                        <i class="fa fa-eye"></i>
-                      </a>
-                      <a href="edit/{{$item->id}}" class="btn btn-warning">
+                      <a href="/admin/masjid/edit/{{$item->id}}" class="btn btn-primary">
                         <i class="fa fa-pencil-alt"></i>
                       </a>
-                      <a href="hapus/{{$item->id}}" class="btn btn-danger">
+                      <a href="/admin/masjid/hapus/{{$item->id}}" class="btn btn-danger">
                         <i class="fa fa-trash-alt"></i>
                       </a>
                     </td>

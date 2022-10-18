@@ -7,6 +7,16 @@ use App\Models\User;
 use Session;
 class UserController extends Controller
 {
+    public function hapus($id){
+        $user = User::find($id);
+        if($user->delete()){
+            Session::flash('success', 'Hapus data berhasil!');
+            return redirect('/admin/user');
+        }else{
+            Session::flash('error', 'Hapus data gagal!');
+            return redirect('/admin/user');
+        }
+    }
     public function index(){
         $data = User::all();
         return view('admin/user/index')->with('data', $data);

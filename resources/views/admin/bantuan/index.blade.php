@@ -3,6 +3,9 @@
 <div class="container">
   <div class="row">
     <div class="col">
+      <div class="m-2">
+        <a href="/admin/bantuan/tambah" class="btn btn-primary">Tambah</a>
+      </div>
       @if (Session::get('error'))
       <div>
         <p class="alert alert-danger">{{Session::get('error')}}</p>

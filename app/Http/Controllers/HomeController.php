@@ -34,9 +34,9 @@ class HomeController extends Controller
                 $gambar     = $request->file('gambar');
                 $namaFile   = uniqid().'.png';
                 if($gambar->move('uploads', $namaFile)){
-                    $gambarMasjid = $namaFile;
+                    $gambarMasjid = 'uploads/'.$namaFile;
                 }else{
-                    $gambarMasjid = 'default.png';
+                    $gambarMasjid = 'uploads/default.png';
                 }
                 $data = [
                     'nama_masjid' => $request->nama_masjid,

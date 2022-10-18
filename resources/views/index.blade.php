@@ -2,13 +2,13 @@
 @section('content')
   <div class="container">
     <div class="row">
-      <div class="col-4">
+      <div class="col-lg-4">
         <div class="card m-3 text-center">
           <div class="card-body">
             <div>
-              <p style="font-size: 20px; text-shadow: 2px 2px 2px rgba(0,0,0,0.25);">APA ITU Tagihan Listrik Masjid?</p>
+              <p style="font-size: 20px; text-shadow: 2px 2px 2px rgba(0,0,0,0.25);">APA ITU Sedekah Listrik Masjid?</p>
               <p>
-                Tagihan Listrik Masjid adalah sebuah platform untuk mengecek apakah sebuah masjid sudah melakukan pembayaran tagihan listrik.
+                Sedekah Listrik Masjid adalah sebuah platform untuk mengecek apakah sebuah masjid sudah melakukan pembayaran tagihan listrik.
               </p>
               <p>
                 Dan sebuah wadah untuk melakukan donasi ke masjid yang membutuhkan biaya untuk membayar tagihan listrik.
@@ -19,7 +19,7 @@
         <div class="card m-3 text-center">
           <div class="card-body">
             <div>
-              <p style="font-size: 20px; text-shadow: 2px 2px 2px rgba(0,0,0,0.25);">IKUTI Tagihan Listrik Masjid</p>
+              <p style="font-size: 20px; text-shadow: 2px 2px 2px rgba(0,0,0,0.25);">IKUTI Sedekah Listrik Masjid</p>
               <p>
                 <a href="" class="btn btn-primary">
                   <i class="fa-brands fa-facebook"></i> Follow
@@ -32,7 +32,7 @@
           </div>
         </div>
       </div>
-      <div class="col-8">
+      <div class="col-lg-8">
         <div class="card m-3 text-center">
           <div class="card-body">
             <div>
@@ -40,7 +40,7 @@
             </div>
             <div class="row">
               @foreach ($data as $masjid)
-              <div class="col-6">
+              <div class="col-lg-6">
                 <div class="card m-2 text-center" >
                   <img src="{{$masjid->gambar}}" class="card-img-top img-thumbnail img-fluid img-responsive" style="height:400px; width:400px; object-fit: cover;">
                   <div class="card-body">

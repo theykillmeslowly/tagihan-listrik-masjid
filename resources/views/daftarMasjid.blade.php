@@ -7,9 +7,9 @@
         <div class="card-body">
           <div class="row">
             @foreach ($data as $masjid)
-            <div class="col-3">
+            <div class="col-lg-3">
               <div class="card m-2 text-center" style="height: 500px;">
-                <img src="{{$masjid->gambar}}" class="card-img-top img-thumbnail img-fluid img-responsive" style="height:300px; width:300px; object-fit: cover;">
+                <img src="{{$masjid->gambar}}" class="card-img-top img-thumbnail img-fluid img-responsive" style="height:300px; width:100%px; object-fit: cover;">
                 <div class="card-body">
                   <span class="card-title">{{Str::limit($masjid->nama_masjid, 30)}}</span>
                   <hr/>
@@ -17,7 +17,7 @@
                     <span style="font-size:15px;">Nomor Meteran</span>
                     <p style="font-size:12px">{{$masjid->no_listrik}}</p>
                     <span style="font-size:15px;">Alamat</span>
-                    <p style="font-size:12px">{{Str::limit($masjid->alamat, 60)}}</p>
+                    <p style="font-size:12px">{{Str::limit($masjid->alamat, 50)}}</p>
                   </div>
                   <a href="#" class="btn btn-primary">Cek Tagihan</a>
                 </div>

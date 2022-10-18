@@ -8,6 +8,11 @@ use App\Models\Masjid;
 
 class MasjidController extends Controller
 {
+    public function pendaftaran(){
+        $data = Masjid::where('tampil', 'tidak')->get();
+        return view('admin/pendaftaran')->with('data', $data);
+    }
+
     public function cekTagihan($noMeter){
         $ch = curl_init();
 
@@ -52,7 +57,8 @@ class MasjidController extends Controller
      */
     public function index()
     {
-        //
+        $data = Masjid::all();
+        return view('admin/masjid/index')->with('data', $data);
     }
 
     /**

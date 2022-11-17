@@ -20,7 +20,7 @@
         @endforeach
       </div>
       @endif
-      <div class="card">
+      <div class="card shadow-lg mt-3">
         <div class="card-header text-center">Form Pendaftaran Masjid</div>
         <div class="card-body">
           <form action="" method="POST" enctype="multipart/form-data">

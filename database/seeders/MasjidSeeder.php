@@ -58,7 +58,7 @@ class MasjidSeeder extends Seeder
             'no_pengurus'   => '087839994311'
         ]);
 
-        \App\Models\Masjid::create([
+        /*\App\Models\Masjid::create([
             'nama_masjid'   => 'Masjid Jami\' Ar Rahman',
             'alamat'        => 'Kampung Waringin Jaya Lebak RW 01, Waringin Jaya, Bojonggede, Bogor',
             'no_listrik'    => '53831127704',
@@ -67,6 +67,6 @@ class MasjidSeeder extends Seeder
             'tampil'        => 'ya',
             'nama_pengurus' => 'Ahmad Yani',
             'no_pengurus'   => '087839994311'
-        ]);
+        ]);*/
     }
 }

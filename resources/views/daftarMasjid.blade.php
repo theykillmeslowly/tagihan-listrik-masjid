@@ -3,12 +3,12 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <div class="card my-3">
+      <div class=" my-3">
         <div class="card-body">
           <div class="row">
             @foreach ($data as $masjid)
             <div class="col-lg-3">
-              <div class="card m-2 text-center" style="height: 500px;">
+              <div class="card shadow m-2 text-center" style="height: 500px;">
                 <img src="{{asset($masjid->gambar)}}" class="card-img-top img-thumbnail img-fluid img-responsive" style="height:300px; width:100%px; object-fit: cover;">
                 <div class="card-body">
                   <span class="card-title">{{Str::limit($masjid->nama_masjid, 30)}}</span>

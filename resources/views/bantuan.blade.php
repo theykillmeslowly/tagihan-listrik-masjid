@@ -16,7 +16,7 @@
         @endforeach
       </div>
       <div class="col-lg-8">
-        <div class="card m-3">
+        <div class="card m-3 shadow">
           <div class="card-body rounded shadow-md">
             <div id="bayar-tagihan">
               <div class="text-center m-2" style="font-size: 20px; text-shadow: 2px 2px 2px rgba(0,0,0,0.25);">

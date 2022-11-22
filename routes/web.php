@@ -39,6 +39,7 @@ Route::group(['prefix' => 'admin'], function (){
       Route::get('/', 'App\Http\Controllers\MasjidController@index');
       Route::get('/hapus/{id}', 'App\Http\Controllers\MasjidController@hapus');
       Route::get('/edit/{id}', 'App\Http\Controllers\MasjidController@edit');
+      Route::get('/tampil/{id}', 'App\Http\Controllers\MasjidController@tampil');
       Route::post('/edit/{id}', 'App\Http\Controllers\MasjidController@edit');
     });
     //Bantuan

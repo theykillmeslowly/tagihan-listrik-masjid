@@ -28,8 +28,8 @@
                       <img src="{{asset($item->gambar)}}" class="card-img-top img-thumbnail img-fluid img-responsive" style="height:200px; width:200px; object-fit: cover;" alt="">
                     </td>
                     <td class="text-center">
-                      <a href="/admin/masjid/edit/{{$item->id}}" class="btn btn-primary">
-                        <i class="fa fa-pencil-alt"></i>
+                      <a href="/admin/masjid/tampil/{{$item->id}}" class="btn btn-success">
+                        <i class="fa fa-check"></i>
                       </a>
                       <a href="/admin/masjid/hapus/{{$item->id}}" class="btn btn-danger">
                         <i class="fa fa-trash-alt"></i>

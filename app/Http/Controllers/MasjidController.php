@@ -8,6 +8,17 @@ use App\Models\Masjid;
 use Session;
 class MasjidController extends Controller
 {
+    public function tampil(Request $request, $id){
+        $masjid = Masjid::find($id);
+        $masjid->tampil = 'ya';
+        if($masjid->save()){
+            Session::flash('success', 'Verifikasi masjid berhasil!');
+            return redirect('/admin/masjid');
+        }else{
+            Session::flash('error', 'Verifikasi masjid gagal!');
+            return redirect('/admin/masjid');
+        }
+    }
     public function edit(Request $request, $id){
         if($request->isMethod('POST')){
             $validate = \Validator::make($request->all(),[

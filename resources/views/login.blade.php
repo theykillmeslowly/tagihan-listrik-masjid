@@ -22,7 +22,8 @@
               <input type="password" class="form-control" name="password">
             </div>
             <div class="mb-3 text-center">
-              <button class="btn btn-primary">Login</button>
+              <button class="btn btn-primary">Masuk</button>
+              <a href="/" class="btn btn-outline-primary">Kembali</a>
             </div>
           </form>
         </div>
